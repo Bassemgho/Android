@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scanclient">
+
+        <Button
+            android:id="@+id/scanbtn"
+            android:layout_width="158dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/black"
+            android:text="Scan QRCode"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/scantext"
+            android:layout_width="136dp"
+            android:layout_height="32dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Id_Client"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/idproduit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/scanbtn"
+            app:layout_constraintVertical_bias="0.819" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id Client:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.177"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.179" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id produit:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.042" />
+
+        <EditText
+            android:id="@+id/idproduit"
+            android:layout_width="136dp"
+            android:layout_height="32dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Id_Produit"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.228"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/prixproduit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prix Produit:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.056" />
+
+        <EditText
+            android:id="@+id/prix"
+            android:layout_width="136dp"
+            android:layout_height="32dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="prix"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/prixproduit"
+            app:layout_constraintTop_toBottomOf="@+id/idproduit"
+            app:layout_constraintVertical_bias="0.027"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/quantite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantité Produit:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.036"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prixproduit"
+            app:layout_constraintVertical_bias="0.037" />
+
+        <EditText
+            android:id="@+id/quantiteproduit"
+            android:layout_width="136dp"
+            android:layout_height="32dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Quantite"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/quantite"
+            app:layout_constraintTop_toBottomOf="@+id/prix"
+            app:layout_constraintVertical_bias="0.03"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/apayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A payer :"
+            android:textColor="@color/red"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/skip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.936"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.849" />
+
+        <TextView
+            android:id="@+id/somme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/red"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/payer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.827"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/apayer"
+            app:layout_constraintVertical_bias="0.619" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="68dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/black"
+            android:onClick="add"
+            android:text="+"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.641" />
+
+        <Button
+            android:id="@+id/sous"
+            android:layout_width="68dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/black"
+            android:onClick="sousOnClick"
+            android:text="-"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.379"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.641" />
+
+
+
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="68dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/red"
+            android:text="Skip"
+            android:textSize="10sp"
+            android:onClick="ClearOnClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/payer"
+            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.956" />
+
+        <Button
+            android:id="@+id/payer"
+            android:layout_width="68dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Payer"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.956" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
