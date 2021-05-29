@@ -95,6 +95,7 @@ public class MainActivityViewModel extends ViewModel {
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 success.setValue(false);
                 getRep().setValue(t.getMessage());
+//                Toast.makeText(getAppl)
 
             }
         });
