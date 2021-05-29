@@ -1,14 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\Sarah\\Desktop\\PCD-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_signin_caissier.xml",
-        "source": "C:\\Users\\Sarah\\Desktop\\PCD-android\\app\\src\\main\\res\\layout\\fragment_signin_caissier.xml"
+        "merged": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_shop.xml",
+        "source": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\layout\\fragment_shop.xml"
     },
     {
-        "merged": "C:\\Users\\Sarah\\Desktop\\PCD-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\login_tab_fragment.xml",
-        "source": "C:\\Users\\Sarah\\Desktop\\PCD-android\\app\\src\\main\\res\\layout\\login_tab_fragment.xml"
+        "merged": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
+        "source": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\Sarah\\Desktop\\PCD-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
-        "source": "C:\\Users\\Sarah\\Desktop\\PCD-android\\app\\src\\main\\res\\layout\\activity_home.xml"
+        "merged": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\login_tab_fragment.xml",
+        "source": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\layout\\login_tab_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_blank.xml",
+        "source": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\layout\\fragment_blank.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_signin_caissier.xml",
+        "source": "C:\\Users\\Sarah\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\layout\\fragment_signin_caissier.xml"
     }
 ]
