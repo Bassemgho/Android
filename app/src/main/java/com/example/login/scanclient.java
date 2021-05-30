@@ -1,13 +1,19 @@
 package com.example.login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.example.login.ViewModels.ScanViewModel;
 
 
 public class scanclient extends AppCompatActivity {
@@ -16,6 +22,7 @@ public class scanclient extends AppCompatActivity {
     public static EditText scantext;
     TextView somme;
     EditText prix ,quantiteproduit,idproduit;
+    ScanViewModel viewModel;
 
 
 
@@ -31,6 +38,30 @@ public class scanclient extends AppCompatActivity {
         scanbtn=(Button)findViewById(R.id.scanbtn);
         skip=(Button)findViewById(R.id.skip);
         payer=(Button)findViewById(R.id.payer);
+        String tk = getSharedPreferences("com.example.login", Context.MODE_PRIVATE).getString("token","");
+        viewModel = new ViewModelProvider(this).get(ScanViewModel.class);
+        viewModel.getSuccess().observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                if (aBoolean){
+                    Toast.makeText(scanclient.this,"operation sucessfull",Toast.LENGTH_LONG).show();
+                    prix.setText("");
+                    quantiteproduit.setText("");
+                    idproduit.setText("");
+                    scantext.setText("");
+
+                }
+            }
+        });
+        viewModel.getRep().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                Toast.makeText(scanclient.this,s,Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
 
 
 
@@ -41,6 +72,19 @@ public class scanclient extends AppCompatActivity {
 
             }
 
+        });
+        payer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewModel.setMontant(somme.getText().toString());
+                viewModel.setId_client(scantext.getText().toString());
+                try {
+                    viewModel.postmontant(tk);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(scanclient.this,e.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            }
         });
     }
 
