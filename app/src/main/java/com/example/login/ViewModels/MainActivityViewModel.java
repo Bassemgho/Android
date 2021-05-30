@@ -16,17 +16,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivityViewModel extends AndroidViewModel {
+public class MainActivityViewModel extends ViewModel {
     String  username;
     String password;
     ApiClient client;
     MutableLiveData<Boolean> success ;
 
     MutableLiveData<String> rep ;
-
-    public MainActivityViewModel(@NonNull Application application) {
-        super(application);
-    }
 
     //     MutableLiveData<String> token;
 //    public MainActivityViewModel(@NonNull Application application) {
@@ -99,7 +95,7 @@ public class MainActivityViewModel extends AndroidViewModel {
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 success.setValue(false);
                 getRep().setValue(t.getMessage());
-                Toast.makeText(getApplication(),t.getMessage(),Toast.LENGTH_LONG).show();
+//                Toast.makeText(getAppl)
 
             }
         });

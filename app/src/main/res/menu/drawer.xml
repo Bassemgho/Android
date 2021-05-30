@@ -7,7 +7,7 @@
         />
     <item android:title="Profile" android:id="@+id/Profile"></item>
 
-    <item android:title="Scan" android:id="@+id/scan"></item>
+    <item android:title="Shop" android:icon="@drawable/ic_baseline_shopping_cart_24" android:id="@+id/shop"/>
     <item android:title="Info" android:id="@+id/info"></item>
     <item android:title="Entreprise" android:id="@+id/entreprise"></item>
     <item android:title="Geo" android:id="@+id/Geo"></item>

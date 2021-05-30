@@ -1,16 +1,22 @@
 package com.example.login;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.login.ViewModels.MainActivityViewModelC;
+import com.example.login.activities.HomeActivity;
+import com.example.login.databinding.FragmentShopBinding;
+import com.example.login.databinding.FragmentSigninCaissierBinding;
 
 
 /**
@@ -20,7 +26,11 @@ import com.example.login.ViewModels.MainActivityViewModelC;
  */
 public class SigninCaissier extends Fragment {
 
-    public MainActivityViewModelC Viewmodel ;
+    public MainActivityViewModelC viewModel ;
+    EditText email,pass;
+    Button button;
+    FragmentSigninCaissierBinding binding;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,7 +77,44 @@ public class SigninCaissier extends Fragment {
                              Bundle savedInstanceState) {
         View root= inflater.inflate(R.layout.fragment_signin_caissier, container, false);
         // Inflate the layout for this fragment
-        Viewmodel = new ViewModelProvider(getActivity()).get(MainActivityViewModelC.class);
+        binding = FragmentSigninCaissierBinding.inflate(inflater,container,false);
+        viewModel = new ViewModelProvider(getActivity()).get(MainActivityViewModelC.class);
+        viewModel.getRep();
+        viewModel.getSuccess().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                if (aBoolean){
+                    Toast.makeText(getContext(),"you got rep"+viewModel.getRep().getValue(),Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getActivity(), scanclient.class);
+                    intent.putExtra("token",viewModel.getRep().getValue());
+                    startActivity(intent);
+                    return;
+
+
+                }
+
+                Toast.makeText(getContext(),"noooo",Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+        binding.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = binding.Email.getText().toString();
+                String password = binding.Pass.getText().toString();
+                viewModel.setPassword(password);
+                viewModel.setUsername(username);
+                try {
+                    viewModel.login();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        });
+
         return root;
     }
 }

@@ -1,31 +1,25 @@
 package com.example.login.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import com.example.login.MapsActivity;
 import com.example.login.R;
 import com.example.login.databinding.ActivityHomeBinding;
 import com.example.login.fragments.HomeFragment;
 import com.example.login.fragments.InfoFragment;
 import com.example.login.fragments.ProfileFragment;
 import com.example.login.fragments.ScanFragment;
-import com.example.login.scanclient;
+import com.example.login.fragments.ShopFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -63,6 +57,10 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
                     case R.id.Profile:
                         fragmentTransaction.replace(R.id.container_fragment,new ProfileFragment()).commit();
+                        binding.drawerlayout.closeDrawers();
+                        return true;
+                    case R.id.shop:
+                        fragmentTransaction.replace(R.id.container_fragment,new ShopFragment()).commit();
                         binding.drawerlayout.closeDrawers();
                         return true;
                     case R.id.info:
