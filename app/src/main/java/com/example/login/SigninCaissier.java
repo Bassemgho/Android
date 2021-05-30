@@ -78,6 +78,7 @@ public class SigninCaissier extends Fragment {
         View root= inflater.inflate(R.layout.fragment_signin_caissier, container, false);
         // Inflate the layout for this fragment
         binding = FragmentSigninCaissierBinding.inflate(inflater,container,false);
+        View view = binding.getRoot();
         viewModel = new ViewModelProvider(getActivity()).get(MainActivityViewModelC.class);
         viewModel.getRep();
         viewModel.getSuccess().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
@@ -106,6 +107,7 @@ public class SigninCaissier extends Fragment {
                 viewModel.setPassword(password);
                 viewModel.setUsername(username);
                 try {
+
                     viewModel.login();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -115,6 +117,6 @@ public class SigninCaissier extends Fragment {
             }
         });
 
-        return root;
+        return view;
     }
 }
