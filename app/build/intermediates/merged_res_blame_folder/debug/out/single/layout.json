@@ -16,6 +16,10 @@
         "source": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
+        "merged": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\signup.xml",
+        "source": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\src\\main\\res\\layout\\signup.xml"
+    },
+    {
         "merged": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_shop.xml",
         "source": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\src\\main\\res\\layout\\fragment_shop.xml"
     }

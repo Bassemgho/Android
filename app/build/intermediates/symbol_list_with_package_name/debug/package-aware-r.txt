@@ -2030,6 +2030,8 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
+id alert
+id alert1
 id alertTitle
 id aligned
 id all
@@ -2138,6 +2140,7 @@ id easeInOut
 id easeOut
 id edit_query
 id elastic
+id email
 id end
 id endToStart
 id end_padder
@@ -2313,6 +2316,7 @@ id pathRelative
 id payer
 id peekHeight
 id percent
+id phonenumber
 id pin
 id position
 id positive_button

@@ -38,7 +38,8 @@ public class scanclient extends AppCompatActivity {
         scanbtn=(Button)findViewById(R.id.scanbtn);
         skip=(Button)findViewById(R.id.skip);
         payer=(Button)findViewById(R.id.payer);
-        String tk = getSharedPreferences("com.example.login", Context.MODE_PRIVATE).getString("token","");
+//        String tk = getSharedPreferences("com.example.login", Context.MODE_PRIVATE).getString("token","");
+        String tk = getIntent().getStringExtra("token");
         viewModel = new ViewModelProvider(this).get(ScanViewModel.class);
         viewModel.getSuccess().observe(this, new Observer<Boolean>() {
             @Override
@@ -49,8 +50,8 @@ public class scanclient extends AppCompatActivity {
                     quantiteproduit.setText("");
                     idproduit.setText("");
                     scantext.setText("");
-
                 }
+
             }
         });
         viewModel.getRep().observe(this, new Observer<String>() {

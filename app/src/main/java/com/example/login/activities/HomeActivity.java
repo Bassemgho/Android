@@ -1,5 +1,7 @@
 package com.example.login.activities;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -40,8 +42,11 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(HomeActivity.this,R.layout.activity_home);
+
 //        toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
+        SharedPreferences preferences = getSharedPreferences("com.example.login", Context.MODE_PRIVATE);
+        preferences.edit().putString("token",getIntent().getStringExtra("token")).apply();
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,binding.drawerlayout,R.string.nav_open,R.string.nav_close);
         binding.drawerlayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();

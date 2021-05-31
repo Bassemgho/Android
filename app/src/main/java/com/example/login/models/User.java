@@ -13,8 +13,6 @@ public class User {
     private String email;
     @SerializedName("phonenumber")
     private String phonenumber;
-    @SerializedName("cartes")
-    private List<Cartes> cartes;
 
     public User(String username, String password, String email, String phonenumber) {
         this.username = username;
@@ -59,11 +57,4 @@ public class User {
         this.phonenumber = phonenumber;
     }
 
-    public List<Cartes> getCartes() {
-        return cartes;
-    }
-
-    public void setCartes(List<Cartes> cartes) {
-        this.cartes = cartes;
-    }
 }
