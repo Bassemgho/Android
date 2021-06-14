@@ -22,5 +22,9 @@
     {
         "merged": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_shop.xml",
         "source": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\src\\main\\res\\layout\\fragment_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_affichage.xml",
+        "source": "C:\\Users\\HP12344\\Downloads\\Files.fm_2021-05-23_7ax3339sd\\PCD-android\\app\\src\\main\\res\\layout\\fragment_affichage.xml"
     }
 ]

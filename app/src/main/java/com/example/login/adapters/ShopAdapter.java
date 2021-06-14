@@ -17,11 +17,13 @@ import java.util.ArrayList;
 
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.shopHolder> {
     Context context;
+    String token;
     ArrayList<Shop> shops = new ArrayList<>();
 
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
-    public ShopAdapter(Context context) {
+    public ShopAdapter(Context context, String tk) {
     this.context = context;
+    this.token = tk;
     }
 
 
@@ -49,7 +51,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.shopHolder> {
         holder.t1.setText(shop.getEntreprise().getName());
         LinearLayoutManager layoutManager = new LinearLayoutManager(holder.childRecycler.getContext(),LinearLayoutManager.HORIZONTAL,false);
         layoutManager.setInitialPrefetchItemCount(shop.getBonparams().size());
-        ChildAdapter adapter = new ChildAdapter(context);
+        ChildAdapter adapter = new ChildAdapter(context,token);
         if (shop.getBonparams().isEmpty()){
             ArrayList<String> list  = new ArrayList<>();
             list.add("null");

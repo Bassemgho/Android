@@ -79,13 +79,14 @@ public class ShopFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_shop, container, false);
         binding = FragmentShopBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
-        adapter = new ShopAdapter(getContext());
+
 
 
 
         viewModel = new ViewModelProvider(this).get(ShopViewModel.class);
         String tk = getActivity().getSharedPreferences("com.example.login", Context.MODE_PRIVATE).getString("token","");
         viewModel.fetshdata("Bearer "+tk);
+        adapter = new ShopAdapter(getContext(),tk);
         viewModel.getSuccess().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean aBoolean) {

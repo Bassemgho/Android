@@ -12,19 +12,30 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.login.R;
+import com.example.login.api.ApiClient;
+import com.example.login.models.AchatBonReponse;
 import com.example.login.models.Bonparam;
+import com.example.login.models.Id;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildHolder> {
+    ApiClient client = new ApiClient();;
     ArrayList<Bonparam> bonparams;
     ArrayList<String> strings;
     Context context;
+    String token;
 
-    public ChildAdapter(Context context) {
+    public ChildAdapter(Context context, String token) {
         this.context = context;
+        this.token = token;
     }
+
 
 
     public ArrayList<String> getStrings() {
@@ -64,6 +75,23 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildHolder>
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Id id = new Id();
+                id.setId(bonparams.get(position).getId());
+                client.getApi().addbon("Bearer "+token,id).enqueue(new Callback<AchatBonReponse>() {
+                    @Override
+                    public void onResponse(Call<AchatBonReponse> call, Response<AchatBonReponse> response) {
+                        if (response!=null && response.isSuccessful() &&response.body()!=null){
+
+                            Toast.makeText(context,"response success",Toast.LENGTH_LONG).show();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<AchatBonReponse> call, Throwable t) {
+
+                    }
+                });
                 Toast.makeText(context,"everythingworks",Toast.LENGTH_LONG).show();
             }
         });

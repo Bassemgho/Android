@@ -1,14 +1,22 @@
 package com.example.login.ViewModels;
 
 import android.app.Application;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.login.api.ApiClient;
+import com.example.login.models.AchatBonReponse;
 import com.example.login.models.AchatCall;
 import com.example.login.models.AchatResponse;
+import com.example.login.models.Bon;
+import com.example.login.models.GetRep;
+import com.example.login.models.Id;
+import com.example.login.models.Id2;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,6 +27,21 @@ public class ScanViewModel extends AndroidViewModel {
     MutableLiveData<Boolean> success;
     MutableLiveData<String> rep;
     ApiClient client;
+    String id;
+    MutableLiveData<ArrayList<Bon>> data;
+    String id_client;
+    String token;
+
+    public MutableLiveData<ArrayList<Bon>> getData() {
+        if (data == null){
+            data = new MutableLiveData<>();
+        }
+        return data;
+    }
+
+    public void setData(MutableLiveData<ArrayList<Bon>> data) {
+        this.data = data;
+    }
 
     public String getId_client() {
         return id_client;
@@ -36,8 +59,7 @@ public class ScanViewModel extends AndroidViewModel {
         this.token = token;
     }
 
-    String id_client;
-    String token;
+
 
     public ScanViewModel(@NonNull Application application) {
         super(application);
@@ -92,6 +114,23 @@ public class ScanViewModel extends AndroidViewModel {
 
             @Override
             public void onFailure(Call<AchatResponse> call, Throwable t) {
+
+            }
+        });
+
+    }
+    public void getbons(String tk,String id){
+
+        getClient().getApi().getbons("Bearer "+tk,id).enqueue(new Callback<GetRep>() {
+            @Override
+            public void onResponse(Call<GetRep> call, Response<GetRep> response) {
+                if (response !=null && response.isSuccessful() && response.body()!=null){
+                    data.setValue(response.body().getData());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetRep> call, Throwable t) {
 
             }
         });

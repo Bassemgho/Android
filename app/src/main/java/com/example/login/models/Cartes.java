@@ -4,15 +4,15 @@ import com.google.gson.annotations.SerializedName;
 
 public class Cartes {
     @SerializedName("id_entreprise")
-    private String entreprise;
+    private Entreprise entreprise;
     @SerializedName("solde")
     private String solde;
 
-    public String getEntreprise() {
+    public Entreprise getEntreprise() {
         return entreprise;
     }
 
-    public void setEntreprise(String entreprise) {
+    public void setEntreprise(Entreprise entreprise) {
         this.entreprise = entreprise;
     }
 

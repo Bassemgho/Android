@@ -2028,6 +2028,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add2
 id adjust_height
 id adjust_width
 id alert
@@ -2090,6 +2091,7 @@ id compactcalendarview
 id confirm_button
 id constraintLayout
 id constraintLayout3
+id contain
 id container
 id container_fragment
 id content
@@ -2218,6 +2220,7 @@ id linear
 id linearlay
 id listMode
 id list_item
+id logo
 id logout
 id lottie_layer_name
 id many_days_picker
@@ -2304,6 +2307,7 @@ id outline
 id outward
 id packed
 id pager
+id par
 id parallax
 id parent
 id parentPanel
@@ -2336,7 +2340,9 @@ id quantiteproduit
 id radio
 id range_picker
 id ratio
+id rec
 id rectangles
+id recy
 id recyclerView
 id restart
 id reverse
@@ -2603,6 +2609,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
+layout fragment_affichage
 layout fragment_blank
 layout fragment_info
 layout fragment_on_boarding1

@@ -3,6 +3,8 @@ package com.example.login.models;
 import com.google.gson.annotations.SerializedName;
 
 public class Bonparam {
+    @SerializedName("_id")
+    String id;
     @SerializedName("pts")
     int pts;
     @SerializedName("delai")
@@ -14,6 +16,14 @@ public class Bonparam {
         this.pts = pts;
         this.delai = delai;
         this.valeurboon = valeurboon;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getPts() {

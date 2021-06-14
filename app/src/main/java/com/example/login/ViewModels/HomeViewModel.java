@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.example.login.api.ApiClient;
 import com.example.login.models.Cartes;
+import com.example.login.models.Entreprise;
 import com.example.login.models.HomeResponse;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import retrofit2.Response;
 public class HomeViewModel extends AndroidViewModel {
     ApiClient client;
 
-    List<String> list1 = new ArrayList<>();
+    List<Entreprise> list1 = new ArrayList<com.example.login.models.Entreprise>();
     List<String> list2 = new ArrayList<>();
     MutableLiveData<String> token = new MutableLiveData<>();
     MutableLiveData<HomeResponse> homeresponse = new MutableLiveData<>();
@@ -55,11 +56,11 @@ public class HomeViewModel extends AndroidViewModel {
         this.homeresponse = homeresponse;
     }
 
-    public List<String> getList1() {
+    public List<Entreprise> getList1() {
         return list1;
     }
 
-    public void setList1(List<String> list1) {
+    public void setList1(List<Entreprise> list1) {
         this.list1 = list1;
     }
 
