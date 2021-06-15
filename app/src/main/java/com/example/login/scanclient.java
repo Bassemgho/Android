@@ -77,7 +77,9 @@ public class scanclient extends AppCompatActivity {
             @Override
             public void onChanged(ArrayList<Bon> bons) {
                 adapter.setBons(bons);
-                Toast.makeText(getApplicationContext(),"changed",Toast.LENGTH_LONG).show();
+                recyclerView.setLayoutManager(new LinearLayoutManager(scanclient.this));
+                recyclerView.setAdapter(adapter);
+                Toast.makeText(getApplicationContext(),"hellllo",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -144,8 +146,7 @@ public class scanclient extends AppCompatActivity {
                 }
             }
         });
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+
     }
 
     private void initTextViews()

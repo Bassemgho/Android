@@ -1,0 +1,163 @@
+com/example/login/models/Id2.java
+ com.example.login.models.Id2
+com/example/login/adapters/ChildAdapter.java
+ com.example.login.adapters.ChildAdapter
+ com.example.login.adapters.ChildAdapter$1
+ com.example.login.adapters.ChildAdapter$1$1
+ com.example.login.adapters.ChildAdapter$ChildHolder
+com/example/login/models/Id.java
+ com.example.login.models.Id
+com/example/login/clandrier.java
+ com.example.login.clandrier
+ com.example.login.clandrier$1
+com/example/login/OnBoardingFragment2.java
+ com.example.login.OnBoardingFragment2
+com/example/login/ViewModels/MainActivityViewModelC.java
+ com.example.login.ViewModels.MainActivityViewModelC
+ com.example.login.ViewModels.MainActivityViewModelC$1
+com/example/login/activities/HomeActivity.java
+ com.example.login.activities.HomeActivity
+ com.example.login.activities.HomeActivity$1
+com/example/login/fragments/ProfileFragment.java
+ com.example.login.fragments.ProfileFragment
+com/example/login/fragments/ScanFragment.java
+ com.example.login.fragments.ScanFragment
+com/example/login/databinding/SignupBinding.java
+ com.example.login.databinding.SignupBinding
+com/example/login/adapters/RecyclerAdapter.java
+ com.example.login.adapters.RecyclerAdapter
+ com.example.login.adapters.RecyclerAdapter$1
+ com.example.login.adapters.RecyclerAdapter$RecHolder
+com/example/login/MainActivity.java
+ com.example.login.MainActivity
+com/example/login/ViewModels/AffichageViewmodel.java
+ com.example.login.ViewModels.AffichageViewmodel
+com/example/login/OnBoardingFragment3.java
+ com.example.login.OnBoardingFragment3
+ com.example.login.OnBoardingFragment3$1
+ com.example.login.OnBoardingFragment3$2
+ com.example.login.OnBoardingFragment3$3
+com/example/login/ViewModels/ScanViewModel.java
+ com.example.login.ViewModels.ScanViewModel
+ com.example.login.ViewModels.ScanViewModel$1
+ com.example.login.ViewModels.ScanViewModel$2
+com/example/login/MapsActivity.java
+ com.example.login.MapsActivity
+com/example/login/api/ApiClient.java
+ com.example.login.api.ApiClient
+com/example/login/scanView.java
+ com.example.login.scanView
+ com.example.login.scanView$1
+com/example/login/fragments/AffichageFragment.java
+ com.example.login.fragments.AffichageFragment
+com/example/login/models/AchatBon.java
+ com.example.login.models.AchatBon
+com/example/login/introactivity.java
+ com.example.login.introactivity
+ com.example.login.introactivity$ScreenSlidePagerAdapter
+com/example/login/logintabfragment.java
+ com.example.login.logintabfragment
+ com.example.login.logintabfragment$1
+ com.example.login.logintabfragment$2
+com/example/login/models/Users.java
+ com.example.login.models.Users
+com/example/login/models/ShopResponse.java
+ com.example.login.models.ShopResponse
+com/example/login/ViewModels/SignupViewModel.java
+ com.example.login.ViewModels.SignupViewModel
+ com.example.login.ViewModels.SignupViewModel$1
+com/example/login/databinding/FragmentAffichageBinding.java
+ com.example.login.databinding.FragmentAffichageBinding
+com/example/login/models/User.java
+ com.example.login.models.User
+com/example/login/models/AchatCall.java
+ com.example.login.models.AchatCall
+com/example/login/models/GetRep.java
+ com.example.login.models.GetRep
+com/example/login/models/AchatResponse.java
+ com.example.login.models.AchatResponse
+com/example/login/adapters/BonAdapter.java
+ com.example.login.adapters.BonAdapter
+ com.example.login.adapters.BonAdapter$1
+ com.example.login.adapters.BonAdapter$1$1
+ com.example.login.adapters.BonAdapter$BonHolder
+com/example/login/api/Api.java
+ com.example.login.api.Api
+com/example/login/scanclient.java
+ com.example.login.scanclient
+ com.example.login.scanclient$1
+ com.example.login.scanclient$2
+ com.example.login.scanclient$3
+ com.example.login.scanclient$4
+ com.example.login.scanclient$5
+ com.example.login.scanclient$6
+com/example/login/SigninCaissier.java
+ com.example.login.SigninCaissier
+ com.example.login.SigninCaissier$1
+ com.example.login.SigninCaissier$2
+com/example/login/ViewModels/ShopViewModel.java
+ com.example.login.ViewModels.ShopViewModel
+ com.example.login.ViewModels.ShopViewModel$1
+com/example/login/LoginAdapter.java
+ com.example.login.LoginAdapter
+com/example/login/models/Shop.java
+ com.example.login.models.Shop
+com/example/login/databinding/LoginTabFragmentBinding.java
+ com.example.login.databinding.LoginTabFragmentBinding
+com/example/login/databinding/FragmentBlankBinding.java
+ com.example.login.databinding.FragmentBlankBinding
+com/example/login/models/AchatBonReponse.java
+ com.example.login.models.AchatBonReponse
+com/example/login/databinding/FragmentShopBinding.java
+ com.example.login.databinding.FragmentShopBinding
+com/example/login/models/Entreprise.java
+ com.example.login.models.Entreprise
+com/example/login/models/LoginResponse.java
+ com.example.login.models.LoginResponse
+com/example/login/models/Bon.java
+ com.example.login.models.Bon
+com/example/login/databinding/FragmentSigninCaissierBinding.java
+ com.example.login.databinding.FragmentSigninCaissierBinding
+com/example/login/signuptabfragment.java
+ com.example.login.signuptabfragment
+ com.example.login.signuptabfragment$1
+ com.example.login.signuptabfragment$2
+ com.example.login.signuptabfragment$3
+ com.example.login.signuptabfragment$4
+com/example/login/fragments/HomeFragment.java
+ com.example.login.fragments.HomeFragment
+ com.example.login.fragments.HomeFragment$1
+ com.example.login.fragments.HomeFragment$2
+com/example/login/fragments/ShopFragment.java
+ com.example.login.fragments.ShopFragment
+ com.example.login.fragments.ShopFragment$1
+ com.example.login.fragments.ShopFragment$2
+com/example/login/models/HomeResponse.java
+ com.example.login.models.HomeResponse
+com/example/login/BuildConfig.java
+ com.example.login.BuildConfig
+com/example/login/databinding/ActivityHomeBinding.java
+ com.example.login.databinding.ActivityHomeBinding
+com/example/login/ViewModels/HomeViewModel.java
+ com.example.login.ViewModels.HomeViewModel
+ com.example.login.ViewModels.HomeViewModel$1
+com/example/login/models/Bonparam.java
+ com.example.login.models.Bonparam
+com/example/login/fragments/InfoFragment.java
+ com.example.login.fragments.InfoFragment
+com/example/login/DataBindingTriggerClass.java
+ com.example.login.DataBindingTriggerClass
+com/example/login/models/Redparams.java
+ com.example.login.models.Redparams
+com/example/login/adapters/ShopAdapter.java
+ com.example.login.adapters.ShopAdapter
+ com.example.login.adapters.ShopAdapter$shopHolder
+com/example/login/OnBoardingFragment1.java
+ com.example.login.OnBoardingFragment1
+com/example/login/models/LoginCall.java
+ com.example.login.models.LoginCall
+com/example/login/ViewModels/MainActivityViewModel.java
+ com.example.login.ViewModels.MainActivityViewModel
+ com.example.login.ViewModels.MainActivityViewModel$1
+com/example/login/models/Cartes.java
+ com.example.login.models.Cartes

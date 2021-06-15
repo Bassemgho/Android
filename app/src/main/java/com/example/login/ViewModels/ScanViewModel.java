@@ -125,7 +125,11 @@ public class ScanViewModel extends AndroidViewModel {
             @Override
             public void onResponse(Call<GetRep> call, Response<GetRep> response) {
                 if (response !=null && response.isSuccessful() && response.body()!=null){
+                    Toast.makeText(getApplication(),"yeeeeeeees",Toast.LENGTH_LONG).show();
                     data.setValue(response.body().getData());
+                }
+                else {
+                    Toast.makeText(getApplication(),"nooooooo",Toast.LENGTH_LONG).show();
                 }
             }
 
